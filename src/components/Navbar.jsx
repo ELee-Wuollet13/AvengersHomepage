@@ -127,8 +127,11 @@ const HoverText = styled.h4`
     <img style={logoStyle} src={logo}/>
     <h1 style={header} className="headerClass">Avengers</h1>
     <div style={divstyle}>
-    <h3 style={h3}>  </h3> <h3 style={h3}> Age of Ultron </h3> <h3 style={h3}> Infinity War </h3> <h3 style={h3}> End Game </h3> <h3 style={h3}> About Us </h3>
+    <h3 style={h3}>  </h3> <h3 style={h3}> Age of Ultron </h3> <h3 style={h3}> Infinity War </h3> <h3 style={h3}> End Game </h3><Link to='/about'> <h3 style={h3}> About Us </h3></Link>
     <style jsx>{`
+      a{
+        color: white;
+      }
       a:visited {
         color:white
       }

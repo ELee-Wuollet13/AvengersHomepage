@@ -11,10 +11,13 @@ function Header(){
   return (
     <div className='header'>
     <style jsx>{`
-
+      body {
+        background-color: #3A506B
+      }
       .avTower {
         width: 100%;
         z-index: -1;
+        border-radius: 30px;
       }
       .textBox {
         text-align: center;
@@ -28,7 +31,7 @@ function Header(){
     <img className='avTower' src={AvTower}/>
     <div className='textBox'>
     <img className='avName' src={AvNameLogo}/>
-    <h1>Welcone to the Avengers home page</h1>
+    <h1>Welcome to the Avengers home page</h1>
     </div>
     </div>
     </div>
