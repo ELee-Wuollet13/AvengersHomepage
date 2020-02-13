@@ -110,6 +110,8 @@ const logoStyle = {
   width: '40px',
   height: '40px',
   marginTop: '10px',
+  marginLeft: '15px',
+  paddingRight: '5px',
 }
 
 const HoverText = styled.h4`
@@ -124,10 +126,14 @@ const HoverText = styled.h4`
 
     <div style={navbar}>
 
-    <img style={logoStyle} src={logo}/>
+    <Link to ='/'><img style={logoStyle} src={logo}/></Link>
     <h1 style={header} className="headerClass">Avengers</h1>
+
     <div style={divstyle}>
-    <h3 style={h3}>  </h3> <h3 style={h3}> Age of Ultron </h3> <h3 style={h3}> Infinity War </h3> <h3 style={h3}> End Game </h3><Link to='/about'> <h3 style={h3}> About Us </h3></Link>
+    <h3 style={h3}>  </h3> <Link to='/AgeOfUltron'><h3 style={h3}> Age of Ultron </h3> </Link>
+    <Link to='/InfinityWar'><h3 style={h3}> Infinity War </h3></Link>
+    <Link to='/Endgame'> <h3 style={h3}>End Game </h3></Link>
+    <Link to='/about'> <h3 style={h3}> About Us </h3></Link>
     <style jsx>{`
       a{
         color: white;

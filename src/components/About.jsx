@@ -82,6 +82,7 @@ function About(){
       .aboutHeader{
         color: white;
         text-align: center;
+        animation: fade-in 1s, slide-down 3s ;
       }
       .characterCards{
         display: flex;
@@ -105,10 +106,10 @@ function About(){
         z-index: -1;
       }
       `}</style>
-    </div>
-    </div>
+      </div>
+      </div>
 
-  );
-};
+    );
+  };
 
-export default About;
+  export default About;
