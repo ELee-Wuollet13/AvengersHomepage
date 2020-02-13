@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Router } from 'react-router-dom';
 import styled from 'styled-components';
-
+import Flippy, { FrontSide, BackSide } from 'react-flippy';
 
 
 function CharacterCards(props){
@@ -10,8 +10,23 @@ function CharacterCards(props){
   return (
     <div className='header'>
     <div className="character">
+
+    <Flippy
+    flipOnHover={false} // default false
+    flipOnClick={true} // default false
+    flipDirection="horizontal" // horizontal or vertical
+    // to use toggle method like this.flippy.toggle()
+    // if you pass isFlipped prop component will be controlled component.
+    // and other props, which will go to div
+
+  >
+    <FrontSide>
     <img className='profileImg' src={props.image.capPic || props.image.ironPic || props.image.thorPic || props.image.hulkPic || props.image.widowPic || props.image.hawkeyePic}/>
-    {console.log(props)}
+  </FrontSide>
+  <BackSide>
+    <img className='profileImg' src={props.image2.StevePic || props.image2.tonyStarkPic || props.image2.ThorCasualPic || props.image2.BruceBannerPic || props.image2.RomonoffPic || props.image2.BartonPic}/>
+  </BackSide>
+  </Flippy>
     <div className='charInfo'>
     <h2 className="charName">{props.name}</h2>
     <h3 className="charBio"> {props.bio}</h3>
@@ -20,12 +35,10 @@ function CharacterCards(props){
     </div>
     <style jsx>{`
       .profileImg {
-
         width: 400px;
         border-radius: 30px;
-
-
       }
+
       .character {
         padding: 10px;
         border: 1px solid black;
@@ -48,8 +61,8 @@ function CharacterCards(props){
         border-radius: 20px;
       }
       `}</style>
-    </div>
-  );
-};
+      </div>
+    );
+  };
 
-export default CharacterCards;
+  export default CharacterCards;
