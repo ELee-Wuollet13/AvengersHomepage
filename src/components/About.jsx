@@ -66,7 +66,7 @@ const characters = [
 function About(){
 
   return (
-    <div>
+    <div class="aboutSection">
     <h1 className='aboutHeader'> About </h1>
     <div className='characterCards'>
     {characters.map((character, index)=>
@@ -87,7 +87,22 @@ function About(){
         display: flex;
         flex-flow: row wrap;
         width: 100%;
-        overflow: auto
+        animation: fade-in 1s, slide-down 3s ;
+
+      }
+
+      @keyframes slide-down {
+        0% { margin-top: -1000px }
+        100% { marign-top: 0px }
+      }
+
+      @keyframes fade-in {
+        0% { opacity: 0 }
+        100% { opacity: 1}
+      }
+      .aboutSection{
+        position: absolute;
+        z-index: -1;
       }
       `}</style>
     </div>

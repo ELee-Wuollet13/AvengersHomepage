@@ -8,11 +8,18 @@ import { Switch, Route, Router } from 'react-router-dom';
 function App() {
   return (
     <div >
+    <div className='topPage'>
     <Navbar/>
     <Header/>
+    </div>
     <Switch>
+    <div className='content'>
     <Route path='/about' component={About}/>
+    </div>
     </Switch>
+    <style jsx> {`
+
+      `}</style>
 
     </div>
   );

@@ -8,12 +8,12 @@ import Flippy, { FrontSide, BackSide } from 'react-flippy';
 function CharacterCards(props){
 
   return (
-    <div className='header'>
+    <div className="Header">
     <div className="character">
 
     <Flippy
-    flipOnHover={false} // default false
-    flipOnClick={true} // default false
+    flipOnHover={true} // default false
+    flipOnClick={false} // default false
     flipDirection="horizontal" // horizontal or vertical
     // to use toggle method like this.flippy.toggle()
     // if you pass isFlipped prop component will be controlled component.
@@ -37,10 +37,12 @@ function CharacterCards(props){
       .profileImg {
         width: 400px;
         border-radius: 30px;
+        height: 300px;
       }
 
       .character {
-        padding: 10px;
+        padding: 20px;
+        padding-right: 40px;
         border: 1px solid black;
         width: 400px;
         height: 600px;
@@ -60,6 +62,9 @@ function CharacterCards(props){
         background-color: #262626;
         border-radius: 20px;
       }
+
+
+
       `}</style>
       </div>
     );
